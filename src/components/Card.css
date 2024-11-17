@@ -1,0 +1,159 @@
+.cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  perspective: 2000px;
+  position: relative;
+  z-index: 1;
+  transform: translate3d(0.1px, 0.1px, 0.1px);
+}
+
+@media screen and (min-width: 600px) {
+  .cards {
+    flex-direction: row;
+  }
+}
+
+.card-holo {
+  width: 71.5vw;
+  height: 100vw;
+  position: relative;
+  overflow: hidden;
+  margin: 20px;
+  border-radius: 5%/3.5%;
+  background-color: #040712;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  transform-origin: center;
+  transform: 
+    rotateX(var(--rotate-x, 0deg)) 
+    rotateY(var(--rotate-y, 0deg)) 
+    rotateZ(var(--rotate-z, 0deg));
+  transition: transform 0.5s ease, box-shadow 0.2s ease;
+  will-change: transform, filter;
+  box-shadow: 
+    -5px -5px 5px -5px var(--shadow-color-1, rgb(79, 103, 131)), 
+    5px 5px 5px -5px var(--shadow-color-2, rgb(121, 94, 124)),
+    -7px -7px 10px -5px transparent, 
+    7px 7px 10px -5px transparent, 
+    0 0 5px 0px rgba(255, 255, 255, 0),
+    0 55px 35px -20px rgba(95, 94, 94, 0.5);
+}
+
+@media screen and (min-width: 600px) {
+  .card-holo {
+    width: clamp(12.9vw, 61vh, 18vw);
+    height: clamp(18vw, 85vh, 25.2vw);
+  }
+}
+
+.card-holo:before,
+.card-holo:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  background-repeat: no-repeat;
+  opacity: 0.5;
+  mix-blend-mode: color-dodge;
+  transition: all 0.33s ease;
+}
+
+.card-holo:before {
+  background-position: var(--bg-position-x, 50%) var(--bg-position-y, 50%);
+  background-size: 300% 300%;
+  background-image: linear-gradient(
+    115deg,
+    transparent 0%,
+    var(--shine-color-1, rgb(79, 103, 131)) 25%,
+    transparent 47%,
+    transparent 53%,
+    var(--shine-color-2, rgb(121, 94, 124)) 75%,
+    transparent 100%
+  );
+  opacity: 0.5;
+  filter: brightness(0.5) contrast(1);
+  z-index: 1;
+}
+
+.card-holo.holo:after {
+  opacity: 1;
+  background-image: url("/public/sparkles.gif"), url("/public/holo.png"),
+    linear-gradient(
+      125deg,
+      #ff00842a 15%,
+      #fca4002a 30%,
+      #ffff002a 40%,
+      #00ff8a2a 60%,
+      #00cfff2a 70%,
+      #cc4cfa2a 85%
+    );
+  background-position: var(--spark-position-x, 50%) var(--spark-position-y, 50%);
+  background-size: 160%;
+  background-blend-mode: overlay;
+  z-index: 2;
+  filter: brightness(1) contrast(1);
+  transition: all 0.33s ease;
+  mix-blend-mode: color-dodge;
+  opacity: 0.75;
+}
+
+.card-holo.holographic {
+  --holo-color-1: #ce6387;
+  --holo-color-2: #bb9753;
+  --holo-color-3: #43c783;
+  --holo-color-4: #489ab3;
+  --holo-color-5: #934fb3;
+}
+
+.card-holo.legendary {
+  --holo-color-1: #d6ab34;
+  --holo-color-2: #db2e2e;
+  --holo-color-3: #e0542a;
+  --holo-color-4: #d66835;
+  --holo-color-5: #dbcf20;
+}
+
+.card-holo.holographic:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0.8; /* Adjust opacity to fine-tune effect */
+  background-image: linear-gradient(
+    115deg,
+    transparent 30%,
+    var(--holo-color-1) 40%,
+    var(--holo-color-2) 50%,
+    var(--holo-color-3) 60%,
+    var(--holo-color-4) 70%,
+    var(--holo-color-5) 80%,
+    transparent 90%
+  );
+  background-size: 200% 200%;
+  animation: holo-shimmer 3s infinite;
+  pointer-events: none; /* Ensures it doesn't interfere with user interactions */
+  border-radius: inherit; /* Matches card's border radius */
+}
+
+/* Keyframes for holographic shimmer */
+@keyframes holo-shimmer {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Animation keyframes remain the same */
