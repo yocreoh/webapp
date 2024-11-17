@@ -9,6 +9,15 @@
       "effect": "Protección familiar y reconciliación, ayuda a resolver conflictos y nudos en la vida."
     },
     {
+      "id": "maradona",
+      "thumbnail": "/small-maradona.png",
+      "title": "Diego Maradona",
+      "image": "/maradona.png",
+      "tags": ["fútbol", "pasión", "milagro"],
+      "prey": "Diego, símbolo de lucha y pasión, acompáñame en mi camino y dame la fuerza para superar los desafíos, como lo hiciste en la cancha.",
+      "effect": "Inspira pasión y perseverancia en el fútbol y la vida, considerado un símbolo de lucha y triunfo en la adversidad."
+    },
+    {
       "id": "san-expedito",
       "thumbnail": "/small-san-expedito.png",
       "title": "San Expedito",
@@ -16,6 +25,15 @@
       "tags": ["justicia", "dinero", "urgencia"],
       "prey": "San Expedito, patrono de las causas urgentes, ayúdame en este momento de necesidad y concédeme la ayuda que busco con tanta fe.",
       "effect": "Intervención rápida en situaciones difíciles, ayuda en problemas urgentes y necesidades de dinero."
+    },
+    {
+      "id": "messi",
+      "thumbnail": "/small-messi.png",
+      "title": "Lionel Messi",
+      "image": "/messi.png",
+      "tags": ["sueños", "perseverancia", "grandeza"],
+      "prey": "Leo, ejemplo de humildad y grandeza, inspíranos a perseguir nuestros sueños con dedicación y a nunca rendirnos ante los obstáculos, como nos enseñaste en cada partido.",
+      "effect": "Símbolo de superación personal y excelencia, inspira a alcanzar metas imposibles y mantener la humildad en el éxito."
     },
     {
       "id": "gauchito-gil",
@@ -36,15 +54,6 @@
       "effect": "Apoyo en los estudios, esperanza y protección para los jóvenes."
     },
     {
-      "id": "maradona",
-      "thumbnail": "/small-maradona.png",
-      "title": "Diego Maradona",
-      "image": "/maradona.png",
-      "tags": ["fútbol", "pasión", "milagro"],
-      "prey": "Diego, símbolo de lucha y pasión, acompáñame en mi camino y dame la fuerza para superar los desafíos, como lo hiciste en la cancha.",
-      "effect": "Inspira pasión y perseverancia en el fútbol y la vida, considerado un símbolo de lucha y triunfo en la adversidad."
-    },
-    {
       "id": "gilda",
       "thumbnail": "/small-gilda.png",
       "title": "Gilda",
@@ -63,15 +72,6 @@
       "effect": "Otorga protección en momentos de transición, justicia y amparo a los que buscan cambio."
     },
     {
-      "id": "pombero",
-      "thumbnail": "/small-pombero.png",
-      "title": "Pombero",
-      "image": "/pombero.png",
-      "tags": ["cosechas", "naturaleza", "protección"],
-      "prey": "Pombero, espíritu de la naturaleza, te pido que cuides de mis tierras y protejas mi hogar de aquellos que buscan dañarlo.",
-      "effect": "Protector de los cultivos y de la naturaleza, ahuyenta malos espíritus y cuida el entorno natural."
-    },
-    {
       "id": "difunta-correa",
       "thumbnail": "/small-difunta-correa.png",
       "title": "Difunta Correa",
@@ -79,15 +79,6 @@
       "tags": ["milagros", "familia", "esperanza"],
       "prey": "Difunta Correa, madre que venciste a la adversidad, danos fortaleza y esperanza para superar nuestras propias pruebas.",
       "effect": "Simboliza la fe y milagros para la protección familiar y la superación de adversidades."
-    },
-    {
-      "id": "san-la-muerte",
-      "thumbnail": "/small-san-la-muerte.png",
-      "title": "San La Muerte",
-      "image": "/san-la-muerte.png",
-      "tags": ["salud", "protección", "poder"],
-      "prey": "San La Muerte, protector de los que viven al límite, dame salud y cuida mi espíritu en cada paso de mi vida.",
-      "effect": "Ofrece protección contra males y enfermedades, y es invocado por quienes buscan amparo en momentos difíciles."
     },
     {
       "id": "mburucuya",

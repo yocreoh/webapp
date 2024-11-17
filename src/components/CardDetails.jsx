@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
+import { useParams, useNavigate, useLocation } from 'react-router-dom';
 import Card from './Card';
 import ShareModal from './ShareModal';
 import GoogleAd from './GoogleAd';
@@ -10,6 +10,21 @@ function CardDetails({ data }) {
   const { id } = useParams();
   const navigate = useNavigate();
   const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const location = useLocation();
+  const queryParams = new URLSearchParams(location.search);
+  const fromValue = queryParams.get('from');
+  const toValue = queryParams.get('to');
+
+  let message = '';
+  
+  if (!fromValue && toValue) {
+    message = `Para ${toValue}.`;
+  } else if (fromValue && !toValue) {
+    message = `Que tengas un hermoso día. ${fromValue}`;
+  } else if (fromValue && toValue) {
+    message = `Para ${toValue}. Que tengas un hermoso día. ${fromValue}`;
+  }
 
   const item = data.find(d => d.id === id);
   if (!item) return <p>Estampita no encontrada.</p>;
@@ -35,6 +50,10 @@ function CardDetails({ data }) {
           {item.tags.map((tag, index) => (
             <Tag key={index}>{tag}</Tag>
           ))}
+        </div>
+        
+        <div className="text-gray-600 flex justify-center mt-4">
+          {message && <span className="font-bold">{message}</span>}
         </div>
 
         <div className="relative p-1 flex justify-center">
