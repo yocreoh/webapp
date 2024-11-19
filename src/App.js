@@ -12,7 +12,11 @@ function App() {
         <NavBar />
         <Routes>
           <Route path="/" element={<CardList data={data} />} />
-          <Route path="/estampita/:id" element={<CardDetails data={data} />} />
+          <Route 
+            path="/estampita/:id" 
+            element={<CardDetails data={data} />} 
+            errorElement={<div>Route Error</div>}
+          />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </div>
